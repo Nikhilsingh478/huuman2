@@ -93,9 +93,11 @@ html {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Adjust the position as needed */
+    bottom: -2px;
+    /* Adjust the position as needed */
     width: 100%;
-    height: 2px; /* Adjust the height as needed */
+    height: 2px;
+    /* Adjust the height as needed */
     background-color: currentColor;
     transition: transform 0.3s ease;
     transform: scaleX(0);
@@ -128,10 +130,10 @@ html {
     position: relative;
     height: 9vw;
     overflow: hidden;
-    
+
 }
 
-#heroleft .elem h1:nth-child(1){
+#heroleft .elem h1:nth-child(1) {
     top: 0;
 }
 
@@ -145,7 +147,7 @@ html {
     color: rgb(49, 54, 58);
     font-weight: 100;
     font-size: 11vw;
-    text-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.3) ;
+    text-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #heroleft button {
@@ -180,7 +182,7 @@ html {
     color: rgb(0, 0, 0);
 }
 
-#heroright :nth-child(3){
+#heroright :nth-child(3) {
     color: rgb(0, 0, 0);
     font-size: 16px;
     margin-top: 25px;
@@ -196,11 +198,11 @@ html {
     margin-bottom: 10px;
 }
 
-#imagediv{
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+#imagediv {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.gapp{
+.gapp {
     width: 100%;
     height: 20px;
 }
@@ -219,7 +221,7 @@ html {
     width: 100%;
     height: 450px;
     margin: 70px 0;
-    
+
 }
 
 span {
@@ -273,13 +275,14 @@ span {
     }
 
     .shop {
-    font-size: 50px;
-    color: #373a40;
-    text-shadow: 2px 2px rgb(64, 44, 44);
+        font-size: 50px;
+        color: #373a40;
+        text-shadow: 2px 2px rgb(64, 44, 44);
     }
+
     /* about media queries end  */
 
-    
+
     /* products media queries ends  */
 
     .grid-container {
@@ -296,13 +299,13 @@ span {
     .newcard {
         width: 360px;
         height: 410px;
-      
+
     }
 
     .wrapcard {
         width: 300px;
         height: 400px;
-    
+
     }
 
     .card {
@@ -360,7 +363,7 @@ body {
     background-color: rgb(126, 120, 120);
     border-radius: 20px;
     margin: auto;
-    
+
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -380,7 +383,7 @@ body {
     perspective: 2500px;
     margin: auto;
     /* margin: 0 50px; */
-    
+
 }
 
 
@@ -478,7 +481,7 @@ rgba(12, 13, 19) 97%
     background-color: rgb(57, 34, 34);
     transition: all 0.3s ease-in;
     border-color: rgb(176, 152, 143);
-    
+
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -492,7 +495,7 @@ rgba(12, 13, 19) 97%
     margin: auto;
 }
 
-.cost{
+.cost {
     margin: auto;
 
 }
@@ -545,7 +548,7 @@ rgba(12, 13, 19) 97%
 
 }
 
-.testimonial:hover{
+.testimonial:hover {
     background-color: rgb(249, 226, 179);
     transition: all 0.4s ease-in;
 }
@@ -572,15 +575,16 @@ rgba(12, 13, 19) 97%
     /* color: #ffffff; */
 }
 
-.smile{
+.smile {
     height: 50px;
 }
+
 /* review section ends */
 
 
 /* socials section starts */
 
-#socials{
+#socials {
     background-color: rgb(109, 103, 97);
     height: 560px;
     width: 100%;
@@ -591,49 +595,49 @@ rgba(12, 13, 19) 97%
     padding: 80px;
 }
 
-#igicon{
+#igicon {
     height: 40px;
 }
 
-.simage{
+.simage {
     height: 400px;
 }
 
-.sleft h2{
+.sleft h2 {
     font-family: kajiro;
     font-size: 90px;
     line-height: 70px;
 }
 
-.ig{
+.ig {
     display: flex;
     flex-direction: column;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     /* gap: 20px; */
     padding: 40px;
 }
 
-.ig h2{
+.ig h2 {
     font-size: 70px;
     font-family: kajiro;
 }
 
-hr{
+hr {
     height: 10px;
     background-color: #373a40;
 }
 
-.socials{
+.socials {
     display: flex;
     gap: 150px;
     justify-content: center;
     align-items: center;
 }
 
-.help{
+.help {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
@@ -647,11 +651,32 @@ hr{
     font-family: "gilroy";
 }
 
-.help a:hover{
-    text-shadow: 0.3px 0.3px rgb(64, 44, 44)!important;
-    transition: all 0.3s ease-in!important;
+.help a:hover {
+    text-shadow: 0.3px 0.3px rgb(64, 44, 44) !important;
+    transition: all 0.3s ease-in !important;
 }
 
-.down{
+.down {
     height: 25px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#page2 {
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+    padding: 5vw 0;
+   
+
+}
+
+#page2 h1 {
+    font-size: 35vw;
+    font-family: 'Segoe UI';
+    /* letter-spacing: 10px; */
+    font-weight: 700;
+    text-transform: uppercase;
 }
