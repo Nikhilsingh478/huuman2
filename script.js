@@ -48,3 +48,65 @@ setTimeout(() => {
 //      dotsClass:'dots'
 //     });
 // });
+
+
+// script for cursor 
+// var body = document.querySelector("body");
+// var cursor = document.querySelector("#cursor");
+
+// body.addEventListener("mousemove",function(param){
+//     gsap.to(cursor,{
+//       x:param.x,
+//       y:param.y,
+//       duration:0.7
+//     })    
+// })
+
+
+
+
+
+
+
+
+
+
+var body = document.querySelector("body");
+var cursor = document.querySelector("#cursor");
+var bubblesContainer = document.querySelector(".bubbles");
+
+body.addEventListener("mousemove", function(event) {
+    gsap.to(cursor, {
+        x: event.clientX,
+        y: event.clientY,
+        duration: 0.5
+    });
+
+    createBubble(event.clientX, event.clientY);
+});
+
+function createBubble(x, y) {
+    var bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    bubblesContainer.appendChild(bubble);
+
+    gsap.set(bubble, {
+        x: x - bubble.clientWidth / 2,
+        y: y - bubble.clientHeight / 2
+    });
+
+    gsap.to(bubble, {
+        x: x + (Math.random() - 0.5) * 100,
+        y: y + (Math.random() - 0.5) * 100,
+        scale: 0,
+        opacity: 0,
+        duration: 1,
+        ease: "power1.out",
+        onComplete: function() {
+            bubble.remove();
+        }
+    });
+}
+
+
+// script for cursor ends 
