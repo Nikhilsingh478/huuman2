@@ -183,3 +183,52 @@ gsap.from(".shopnow h1", {
         scrub: 5,
     }
 });
+
+
+// gsap.from(".testimonial",{
+//     x:-200,
+//     duration:1,
+//     opacity:0,
+//     ease:"power4.out",
+//     scrollTrigger: {
+//         trigger: ".testimonials-grid",
+//         scroller: "body",
+//         scrub: 5,
+//     }
+
+// })
+
+
+
+gsap.from(".title", {
+    // opacity: 0,
+    x: 250,
+    duration: 1,
+    ease: "power4.out",
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".title",
+        scroller: "body",
+        scrub: 5,
+        start: "top 70%",
+        end: "top 40%"
+    }
+
+});
+
+gsap.from(".subtitle", {
+    // opacity: 0,
+    x: -250,
+    duration: 1,
+    ease: "power4.out",
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".subtitle",
+        scroller: "body",
+        scrub: 5,
+        start: "top 70%",
+        end: "top 40%"
+    }
+
+});
+

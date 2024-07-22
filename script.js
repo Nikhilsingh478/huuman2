@@ -110,3 +110,10 @@ function createBubble(x, y) {
 
 
 // script for cursor ends 
+
+// script for review section 
+window.onload = function() {
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    const testimonials = testimonialsGrid.innerHTML;
+    testimonialsGrid.innerHTML += testimonials; // Duplicate the testimonials for continuous scrolling
+}

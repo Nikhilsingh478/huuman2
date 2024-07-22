@@ -211,29 +211,35 @@ html {
 
 /* about section starts */
 .video {
+    height: 100%;
+    width: 100%;
     background-color: #686d76;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 90%;
-    width: 100%;
-    /* border-top: solid 1px black;
-    border-bottom: solid 1px black; */
+    position: relative;
 }
 
 #video {
-    width: 100%;
     height: 100%;
-    margin: 70px 0;
-
+    width: 100%;
+    object-fit: cover;
 }
 
-span {
-    font-size: 240px;
-    color: #dc5f00;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    /* Ensure the overlay doesn't block video controls */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
 
 }
-
 
 .huuman {
     font-size: 140px;
@@ -255,83 +261,6 @@ span {
 
 
 /* about section ends  */
-
-/* media queries about and product starts */
-@media (max-width: 440px) {
-    .video {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #video {
-        width: 80%;
-        height: 280px;
-    }
-
-    span {
-        font-size: 90px;
-    }
-
-    .huuman {
-        font-size: 60px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
-    }
-
-    .shop {
-        font-size: 50px;
-        color: #373a40;
-        text-shadow: 2px 2px rgb(64, 44, 44);
-    }
-
-    /* about media queries end  */
-
-
-    /* products media queries ends  */
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        /* place-content: center; */
-        place-items: center;
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .newcard {
-        width: 360px;
-        height: 410px;
-
-    }
-
-    .wrapcard {
-        width: 300px;
-        height: 400px;
-
-    }
-
-    .card {
-        width: 260px;
-        height: 300px;
-        padding: 0 20px;
-        perspective: 2500px;
-    }
-
-    .cover-image {
-        width: 240px;
-        height: 230px;
-        object-fit: cover;
-        position: relative;
-        /* left: 25px; */
-    }
-
-
-
-}
-
-/* media queries about and product ends */
 
 
 /* products section starts */
@@ -387,10 +316,11 @@ body {
     padding: 0 36px;
     perspective: 2500px;
     margin: auto;
-    /* margin: 0 50px; */
-
 }
 
+.character{
+filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
+}
 
 .wrapper {
     width: 500px;
@@ -404,9 +334,9 @@ body {
 
 .card:hover .wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    /* box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); */
 }
 
 .wrapper::before,
@@ -507,20 +437,22 @@ rgba(12, 13, 19) 97%
 
 
 /* products section ends */
+
+
+/* review section starts  */
+
 .container {
     text-align: center;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     padding-bottom: 40px;
 }
 
 .title {
     color: rgb(28, 28, 26);
-    font-size: 24px;
+    font-size: 70px;
     margin-bottom: 10px;
     font-family: 'Kajiro';
-    font-size: 70px;
-    text-decoration: solid;
     text-shadow: 1px 1px rgb(64, 44, 44);
 }
 
@@ -536,21 +468,27 @@ rgba(12, 13, 19) 97%
     font-family: monospace;
 }
 
+.testimonials-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    display: flex;
+    animation: scroll 20s linear infinite;
 }
 
 .testimonial {
-    /* background-color: #333; */
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(36, 27, 27, 0.2); */
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     text-align: left;
-
+    flex: 0 0 300px;
+    margin-right: 20px;
+    height: 250px;
+    margin: 20px;
+    animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .testimonial:hover {
@@ -566,7 +504,6 @@ rgba(12, 13, 19) 97%
 .review {
     font-size: 14px;
     margin: 10px 0;
-    /* color: aliceblue; */
     font-family: system-ui;
 }
 
@@ -577,12 +514,78 @@ rgba(12, 13, 19) 97%
 
 .role {
     font-size: 12px;
-    /* color: #ffffff; */
 }
 
 .smile {
     height: 50px;
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Media Queries for Responsiveness */
+/* @media (max-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .testimonial {
+        flex: 0 0 90%;
+        margin: 0 auto 20px;
+        height: auto;
+    }
+
+    .testimonials-grid {
+        display: block;
+    }
+
+    .testimonials-wrapper {
+        overflow: hidden;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+} */
+/* 
+@media (max-width: 480px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .testimonial {
+        padding: 10px;
+    }
+} */
 
 /* review section ends */
 
@@ -626,11 +629,6 @@ rgba(12, 13, 19) 97%
 .ig h2 {
     font-size: 70px;
     font-family: kajiro;
-}
-
-hr {
-    height: 10px;
-    background-color: #373a40;
 }
 
 .socials {
@@ -678,7 +676,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 #page2 h1 {
@@ -720,7 +718,7 @@ body {
     opacity: 0;
     animation: load 1.5s linear;
     animation-delay: 1s;
-    
+
 }
 
 #loader h1:nth-child(2) {
@@ -752,19 +750,21 @@ body {
 /* loader css ends  */
 
 /* css for cursor  */
-#cursor{
+#cursor {
     height: 35px;
     width: 35px;
     background-color: white;
     border-radius: 50%;
     position: fixed;
-    opacity: 0.9;
+    opacity: 0.6;
     text-align: center;
     font-family: Impact;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
+    color: black;
+    pointer-events: none;
 }
 
 
@@ -793,3 +793,21 @@ body {
 
 
 /* css for cursor ends  */
+
+
+/* css for huuman animation  */
+
+
+
+/* animation for huuman ends  */
+
+
+hr {
+    height: 10px;
+    background-color: black;
+    border: black;
+    opacity: 0.9;
+}
+
+
+
