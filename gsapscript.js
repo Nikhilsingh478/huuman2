@@ -231,4 +231,3 @@ gsap.from(".subtitle", {
     }
 
 });
-

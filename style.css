@@ -198,6 +198,7 @@ html {
     background-size: cover;
     background-position: center;
     margin-bottom: 10px;
+
 }
 
 #imagediv {
@@ -303,7 +304,7 @@ body {
 }
 
 .wrapcard:hover {
-    background-color: #8e8e81;
+    background-color: rgb(116, 109, 109);
     transition: 0.4s all ease-in;
 }
 
@@ -335,6 +336,7 @@ filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
 
 .card:hover .wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    filter: blur(6px);
     /* box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); */
@@ -484,6 +486,7 @@ filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
 .testimonial:hover {
     background-color: rgb(249, 226, 179);
     transition: all 0.4s ease-in;
+    transform: scale(1.2,1.2);
 }
 
 .stars {
@@ -599,6 +602,11 @@ filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
 
 .simage {
     height: 400px;
+}
+
+#igicon:hover{
+    transform: scale(1.2,1.2);
+    transition: all 0.4s ease-in;
 }
 
 .sleft h2 {
@@ -798,6 +806,3 @@ hr {
     border: black;
     opacity: 0.9;
 }
-
-
-
